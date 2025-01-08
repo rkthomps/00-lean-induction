@@ -13,7 +13,7 @@ open Tree
    Problem 1 (NK: exercise 2.6)
    *********************************************************************************** -/
 
- def contents {α : Type} (t: Tree α) : List α :=
+def contents {α : Type} (t: Tree α) : List α :=
   match t with
   | leaf => []
   | node l x r => contents l ++ (x :: contents r)
