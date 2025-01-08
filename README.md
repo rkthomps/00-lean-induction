@@ -2,7 +2,7 @@
 Homework assignment 0 for CSE 230
 
 ## Installation 
-You do not have to install lean to do this assignment. Instead, you can use Github Codespaces to do the assignment with VSCode in your browser using an environment we have already set up. When creating the codespace, please allow 1-2 minutes for the codespace to finish setting up, and 1-2 minutes for the lean language server to start.  
+You do not have to install lean to do this assignment. Instead, you can use Github Codespaces to do the assignment with VSCode in your browser using an environment we have already set up. You can create a codespace by selecting (Code -> Create codespace). After that, you can use the same codespace across sessions of completing the assignment. When creating the codespace, please allow 1-2 minutes for the codespace to finish setting up, and 1-2 minutes for the lean language server to start.  
 
 
 ## Instructions
