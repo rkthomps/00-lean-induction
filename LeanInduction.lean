@@ -31,7 +31,7 @@ def sum_list (l : List Nat) : Nat :=
 /- HINT:  You may need a helper lemma -/
 
 theorem sum_tree_contents : ∀ (t: Tree Nat), sum_tree t = sum_list (contents t) := by
-sorry
+ sorry
 
 /- ***********************************************************************************
    Problem 2 (NK: exercise 2.7)
