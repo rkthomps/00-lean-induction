@@ -16,7 +16,7 @@ lake exe autograder
 ```
 
 ## Submitting
-To submit the assignment, simply push your changes to your assignment repository. You may push changes as often as you like. We will grade the latest change at the assignment due date. 
+To submit the assignment, simply `git commit` and `git push` your changes to your assignment repository. You may push changes as often as you like. We will grade the latest change at the assignment due date. 
 
 
 ## Research
