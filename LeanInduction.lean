@@ -30,7 +30,6 @@ def sum_list (l : List Nat) : Nat :=
 
 /- HINT:  You may need a helper lemma -/
 
--- @[autogradedProof 10]
 theorem sum_tree_contents : ∀ (t: Tree Nat), sum_tree t = sum_list (contents t) := by
 sorry
 
@@ -53,7 +52,6 @@ def post_order {α : Type} (t: Tree α) : List α :=
   | leaf => nil
   | node l x r => post_order l ++ post_order r ++ [x]
 
--- @[autogradedProof 10]
 theorem mirror_order : ∀ {α : Type} (t: Tree α), pre_order (mirror t) = reverse (post_order t) := by
  sorry
 
@@ -63,14 +61,12 @@ theorem mirror_order : ∀ {α : Type} (t: Tree α), pre_order (mirror t) = reve
    *********************************************************************************** -/
 
 -- (a) First, complete the implementation of `intersp` so that `test_intersp` is automatically verified.
--- @[autogradedProof 5]
 def intersp {α : Type} (y: α) (xs : List α) : List α :=
  sorry
 
 theorem test_intersp : intersp 0 [1,2,3,4,5] = [1,0,2,0,3,0,4,0,5] := by rfl
 
 -- (b) Next, write a function `mymap` such that `test_map` is automatically verified
--- @[autogradedProof 5]
 def mymap {α β : Type} (f : α -> β) (xs: List α) : List β :=
  sorry
 
@@ -78,7 +74,6 @@ theorem test_mymap : mymap (λ x => x * 10) [1,2,3] = [10,20,30] := by rfl
 
 -- (c) Finally, prove the following theorem about `intersp` and `mymap`
 
--- @[autogradedProof 10]
 theorem map_intersperse : (∀ {α β : Type} (f: α -> β) (y: α) (xs: List α), map f (intersp y xs) = intersp (f y) (map f xs)) := by
  sorry
 
@@ -91,7 +86,6 @@ def tail_rec_add (n m: Nat) : Nat :=
   | 0 => m
   | n' + 1 => tail_rec_add n' (m + 1)
 
--- @[autogradedProof 10]
 theorem tail_rec_add_eq : ∀ (n m: Nat), tail_rec_add n m = n + m := by
  sorry
 
@@ -131,7 +125,6 @@ def poly2 : Exp := Add poly1 poly0
 -- (a) Complete the definition of a function `eval` such that `eval e x` evaluates `e` at the value `x`;
 -- when you are done, `eval_test` should be automatically checked.
 
--- @[autogradedProof 5]
 def eval (e: Exp) (x: Nat) : Nat :=
  sorry
 
@@ -144,7 +137,6 @@ theorem eval_test : eval poly2 5 = 65 := rfl
 abbrev Poly := List Nat
 
 -- (b) Complete the implementation of `evalp` so that `evalp_test` succeeds automatically
--- @[autogradedProof 5]
 def evalp (p: Poly) (x: Nat) : Nat :=
  sorry
 
@@ -154,7 +146,6 @@ theorem evalp_test : evalp [10, 1, 2] 5 = eval poly2 5 := rfl
 -- HINT: you may need helper functions `addp` and `mulp` which *add* and *multiply* two `Poly`s
 
 
--- @[autogradedProof 20]
 def coeffs (e: Exp) : Poly :=
  sorry
 
@@ -166,6 +157,5 @@ theorem coeffs_test : coeffs poly2 = [10, 1, 2] := by rfl
 
 
 
--- @[autogradedProof 30]
 theorem eval_poly : ∀ (e:Exp) (x:Nat), evalp (coeffs e) x = eval e x := by
  sorry
