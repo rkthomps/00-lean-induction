@@ -74,7 +74,7 @@ theorem test_mymap : mymap (λ x => x * 10) [1,2,3] = [10,20,30] := by rfl
 
 -- (c) Finally, prove the following theorem about `intersp` and `mymap`
 
-theorem map_intersperse : (∀ {α β : Type} (f: α -> β) (y: α) (xs: List α), mymap f (intersp y xs) = intersp (f y) (mymap f xs)) := by
+theorem map_intersperse : (∀ {α β : Type} (f: α -> β) (y: α) (xs: List α), map f (intersp y xs) = intersp (f y) (map f xs)) := by
  sorry
 
 
